@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 const port = 3000;
 const apiKey = "4e5ba7a52e2944b1bff3f09876fd47ee";
-const newsApiUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+const newsApiUrl = `https://newsapi.org/v2/everything?q=apple&from=2024-07-17&to=2024-07-17&sortBy=popularity&apiKey=${apiKey}`;
 
 app.use(cors());
 
