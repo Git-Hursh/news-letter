@@ -9,7 +9,7 @@ const BlogGrid = () => {
   const navigate = useNavigate();
 
   const getNewsData = async (url) => {
-    console.log("Fetching news data..."); // Debugging log
+    console.log("Fetching news data...");
     const res = await fetch(url);
     const data = await res.json();
     // Filter out articles with removed titles
@@ -17,7 +17,7 @@ const BlogGrid = () => {
       (article) => article.title !== "[Removed]"
     );
     setBlogs(filteredBlogs);
-    console.log("News data received", filteredBlogs); // Debugging log
+    console.log("News data received", filteredBlogs);
   };
 
   useEffect(() => {
@@ -40,6 +40,7 @@ const BlogGrid = () => {
               id={index}
               title={blog.title}
               description={blog.description}
+              content={blog.content}
               imageUrl={blog.urlToImage}
               url={blog.url}
               author={blog.author}

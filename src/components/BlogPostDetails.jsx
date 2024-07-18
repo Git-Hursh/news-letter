@@ -6,6 +6,9 @@ const BlogPostDetail = () => {
   const { state } = useLocation();
   const { blog } = state || {};
 
+  console.log("BLOGGGGG", blog)
+  console.log("BLOGGGGG")
+
   if (!blog) {
     return <div>No blog post found.</div>;
   }
@@ -26,6 +29,7 @@ const BlogPostDetail = () => {
           style={{ width: "100%", borderRadius: "10px", marginBottom: "20px" }}
         />
         <Typography variant="body1">{blog.description}</Typography>
+        <Typography variant="body2">{blog.content}</Typography>
       </Box>
     </Container>
   );

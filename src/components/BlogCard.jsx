@@ -52,25 +52,18 @@ const BlogCard = ({
     <Card style={styles.card} onClick={onClick}>
       <CardActionArea>
         <CardMedia
-          component="img"
           alt={title}
           style={styles.media}
           image={imageUrl}
           title={title}
         />
         <CardContent style={styles.content}>
-          <Typography
-            gutterBottom
-            variant="h5"
-            component="div"
-            style={styles.title}
-          >
+          <Typography gutterBottom variant="h5" style={styles.title}>
             {title}
           </Typography>
           <Typography
             variant="body2"
             color="textSecondary"
-            component="p"
             style={styles.description}
           >
             {description}
